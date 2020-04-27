@@ -56,6 +56,7 @@
         },
         methods:{
             tiaozhuan(){
+                this.$router.push('/shouchang')
                 console.log(111)
             }
         }
