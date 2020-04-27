@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import zh from "./zh/zhRouter"
 
 Vue.use(VueRouter)
 
@@ -22,7 +23,10 @@ Vue.use(VueRouter)
       path: '/my',
       name: 'My',
       component: () => import(/* webpackChunkName: "about" */ '../views/My.vue')
-    }
+    },
+      ...zh
+
+
 ]
 
 const router = new VueRouter({
