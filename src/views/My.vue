@@ -1,5 +1,5 @@
 <template>
-    <div class="">
+    <div id="body">
         <div class="header">
             <div class="header-top">
                 <div class="user-infor">
@@ -27,9 +27,9 @@
             </div>
         </div>
         <div class="main">
-            <div >常用功能</div>
+            <h4 >常用功能</h4>
             <div class="choice">
-                <div>1</div>
+                <div @click="tiaozhuan">收藏</div>
                 <div>2</div>
                 <div>3</div>
                 <div>4</div>
@@ -53,12 +53,19 @@
             return {
                 username: '用户名'
             }
+        },
+        methods:{
+            tiaozhuan(){
+                console.log(111)
+            }
         }
     }
 </script>
 
 <style scoped lang="less">
-
+    #body{
+        height: 1000px;
+    }
     .header-top {
         display: flex;
         justify-content: space-between;
@@ -103,12 +110,13 @@
         border: 1px solid black;
         border-radius: 5px;
         &>h4{
-            margin-left: 0;
+            text-align: left;
+            margin-left: 10px;
         }
         &>.choice{
             margin-left: 12px;
             display:flex;
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
             justify-content: start;
             &>div{
                 width: 50px;
