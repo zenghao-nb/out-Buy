@@ -1,12 +1,21 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+ HEAD
 import Home from '../views/Home.vue'
 import zh from "./zh/zhRouter"
+
+// import Home from '../views/Home.vue' mxm-branch
 
 Vue.use(VueRouter)
 
   const routes = [
+  // {
+  //   path: '/',
+  //   name: 'Home',
+  //   component: Home
+  // },
   {
+ 
     path: '/',
     name: 'Home',
     component: Home
@@ -27,6 +36,12 @@ Vue.use(VueRouter)
 
 
   ,{
+
+    path: '/order',
+    name: 'Order',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Mxm/Order.vue')
+  },{
+ 
     path: '/his',
     name: ' History',
     component: () => import(/* webpackChunkName: "about" */ '../components/History/His.vue')
