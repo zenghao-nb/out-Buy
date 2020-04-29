@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <div id="nav">
+<<<<<<< HEAD
       <router-link to="/">
         <i class="el-icon-s-home"></i>
         <span>首页</span>
@@ -13,6 +14,10 @@
         <i class="el-icon-s-home"></i>
         <span>我的</span>
       </router-link>
+=======
+      <!-- <router-link to="/">Home</router-link> | -->
+      <router-link to="/order">Order</router-link>
+>>>>>>> mxm-branch
     </div>
 <!--      <tableBar></tableBar>-->
     <router-view/>
